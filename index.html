@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MyCarMan — Your Car's Complete Service Memory</title>
+<meta name="description" content="MyCarMan is a one-time-purchase car maintenance log for iPhone. Track service records, receipts, reminders and export a full history. No subscription.">
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #0d0d10; color: #f2f2f7; line-height: 1.6;
+  }
+  a { color: #ffd60a; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
+  nav .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.1rem; }
+  nav .brand img { width: 34px; border-radius: 8px; }
+  nav a.nav-link { color: #c7c7cc; font-size: .95rem; margin-left: 18px; }
+
+  .hero {
+    display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px;
+    align-items: center; padding: 60px 0 50px;
+  }
+  .hero h1 { font-size: 2.9rem; line-height: 1.15; letter-spacing: -.5px; }
+  .hero h1 .gold { color: #ffd60a; }
+  .hero p.tag { font-size: 1.25rem; color: #c7c7cc; margin: 18px 0 26px; }
+  .pills { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 26px; }
+  .pill {
+    background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14);
+    border-radius: 999px; padding: 6px 16px; font-size: .9rem; color: #e5e5ea;
+  }
+  .cta { display: flex; gap: 14px; flex-wrap: wrap; }
+  .button {
+    display: inline-block; border-radius: 999px; padding: 12px 30px; font-weight: 700;
+    font-size: 1rem; text-decoration: none;
+  }
+  .button.primary { background: #ffd60a; color: #111 !important; }
+  .button.primary:hover { background: #ffe033; text-decoration: none; }
+  .button.ghost { border: 1.5px solid rgba(255,255,255,.3); color: #f2f2f7 !important; }
+  .button.ghost:hover { text-decoration: none; border-color: #ffd60a; }
+  .hero .icon img {
+    width: 100%; max-width: 320px; border-radius: 22%;
+    box-shadow: 0 20px 60px rgba(0,0,0,.55);
+    display: block; margin: 0 auto;
+  }
+
+  section { padding: 55px 0; }
+  section h2 { font-size: 1.9rem; margin-bottom: 8px; letter-spacing: -.3px; }
+  section .sub { color: #8e8e93; margin-bottom: 34px; }
+
+  .features {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px;
+  }
+  .feature {
+    background: #16161a; border: 1px solid rgba(255,255,255,.08);
+    border-radius: 16px; padding: 22px;
+  }
+  .feature .ficon { width: 30px; height: 30px; }
+  .feature h3 { margin: 10px 0 6px; font-size: 1.08rem; }
+  .feature p { color: #aeaeb2; font-size: .95rem; }
+
+  .buy {
+    background: linear-gradient(135deg, #1a1a1f, #101014);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 22px; text-align: center; padding: 46px 24px;
+  }
+  .buy .price { font-size: 3rem; font-weight: 800; }
+  .buy .strike { color: #8e8e93; text-decoration: line-through; font-size: 1.2rem; margin-left: 8px; font-weight: 400; }
+  .buy p { color: #c7c7cc; max-width: 480px; margin: 10px auto 24px; }
+
+  footer {
+    border-top: 1px solid rgba(255,255,255,.1);
+    margin-top: 40px; padding: 28px 0 46px;
+    color: #8e8e93; font-size: .9rem;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  }
+  @media (max-width: 760px) {
+    .hero { grid-template-columns: 1fr; text-align: center; }
+    .hero .pills, .hero .cta { justify-content: center; }
+    .hero .icon { order: -1; }
+    .hero .icon img { max-width: 220px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <nav>
+    <div class="brand">
+      <img src="app-icon.png" alt="MyCarMan icon">
+      MyCarMan
+    </div>
+    <div>
+      <a class="nav-link" href="#features">Features</a>
+      <a class="nav-link" href="support.html">Support</a>
+      <a class="nav-link" href="privacy.html">Privacy</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div>
+      <h1>Your car's <span class="gold">complete</span> service memory.</h1>
+      <p class="tag">Every oil change, every receipt, every reminder — logged on your iPhone, synced through your iCloud, exported as a report.</p>
+      <div class="pills">
+        <span class="pill">One purchase</span>
+        <span class="pill">No subscription</span>
+        <span class="pill">No account</span>
+        <span class="pill">Private iCloud sync</span>
+      </div>
+      <div class="cta">
+        <a class="button primary" href="#" id="appstore-link">Get MyCarMan — $5.99</a>
+        <a class="button ghost" href="#features">See features</a>
+      </div>
+    </div>
+    <div class="icon">
+      <img src="app-icon.png" alt="MyCarMan app icon">
+    </div>
+  </div>
+
+  <section id="features">
+    <h2>Built for people who actually keep their cars.</h2>
+    <p class="sub">Everything a good service log should do — nothing it shouldn't.</p>
+    <div class="features">
+      <div class="feature"><svg class="ficon" viewBox="0 0 24 24" fill="none" stroke="#ffd60a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11"/><path d="M4 11h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-1"/><path d="M3 17v-5a1 1 0 0 1 1-1"/><circle cx="7.5" cy="17" r="1.8"/><circle cx="16.5" cy="17" r="1.8"/><path d="M9.3 17h5.4M4 17h1.7M18.3 17H20"/></svg><h3>Vehicle profiles</h3><p>Year, make, model, VIN, owner, odometer. 40+ makes in the built-in catalog.</p></div>
+      <div class="feature"><svg class="ficon" viewBox="0 0 24 24" fill="none" stroke="#ffd60a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-2.5-1.6L13 21l-2.5-1.6L8 21l-2-1.3z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><h3>Service records & receipts</h3><p>Date, shop, cost, and odometer at every service. Attach receipts and photos.</p></div>
+      <div class="feature"><svg class="ficon" viewBox="0 0 24 24" fill="none" stroke="#ffd60a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 9a6 6 0 1 0-12 0c0 6-2 7-2 7h16s-2-1-2-7"/><path d="M10 20a2 2 0 0 0 4 0"/></svg><h3>Maintenance reminders</h3><p>Mile and month intervals that count down from your own history. Local notifications only.</p></div>
+      <div class="feature"><svg class="ficon" viewBox="0 0 24 24" fill="none" stroke="#ffd60a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg><h3>One-tap history export</h3><p>CSV for spreadsheets, PDF report to hand to a buyer or your mechanic.</p></div>
+      <div class="feature"><svg class="ficon" viewBox="0 0 24 24" fill="none" stroke="#ffd60a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v10"/><path d="M8 10l4 4 4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg><h3>CSV import</h3><p>Moving from another app? Bring your history with you.</p></div>
+      <div class="feature"><svg class="ficon" viewBox="0 0 24 24" fill="none" stroke="#ffd60a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 1 1 8 0v3"/><circle cx="12" cy="15" r="1.6" fill="#ffd60a" stroke="none"/></svg><h3>Private by design</h3><p>Data stays on your device and your private iCloud database. No accounts, no analytics, no tracking.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="buy">
+      <h2>One price. Yours forever.</h2>
+      <div class="price">$5.99<span class="strike">$3.99</span></div>
+      <p>Pay once for every feature, every vehicle, every update. MyCarMan has no subscription — your maintenance log shouldn't have one either.</p>
+      <a class="button primary" href="#" id="appstore-link-2">Download on the App Store</a>
+    </div>
+  </section>
+
+  <footer>
+    <div>© 2026 Joe Lill · <a href="mailto:mobilecarman130@gmail.com">mobilecarman130@gmail.com</a></div>
+    <div><a href="privacy.html">Privacy Policy</a> · <a href="support.html">Support</a></div>
+  </footer>
+
+</div>
+
+<script>
+  // Fill in the real App Store URL once the app is live:
+  const APP_STORE_URL = "https://apps.apple.com/"; // TODO: replace with your app's store link
+  document.querySelectorAll("#appstore-link, #appstore-link-2").forEach(a => a.href = APP_STORE_URL);
+</script>
+
+</body>
+</html>
